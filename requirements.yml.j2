@@ -1,0 +1,4 @@
+collections:
+{% for collection in collections | default(['community.general']) %}
+  - name: {{ collection }}
+{% endfor %}
