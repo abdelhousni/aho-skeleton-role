@@ -22,7 +22,7 @@
   },
 
   // Run commands after the container is created to finalize setup.
-  "postCreateCommand": "ansible-galaxy collection install community.general",
+    "postCreateCommand": "ansible-galaxy collection install {{ collections | default(['community.general']) | join(' ') }}",
 
   // Forward any necessary ports.
   // "forwardPorts": [],
